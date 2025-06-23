@@ -3,15 +3,11 @@ from enum import Enum
 
 
 class HandleTypes(Enum):
-    REDIRECT = 0
-    WWW = 1
+    REDIRECT = "redirect"
+    WWW = "www"
 
     def __str__(self):
-        if self.value == self.REDIRECT:
-            return "redirect"
-        elif self.value == self.WWW:
-            return "www"
-        return ""
+        return self.value
 
 @dataclass
 class HandlerConf:
