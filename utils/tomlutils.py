@@ -17,5 +17,5 @@ def register_server(config: ServerConf):
 
 def save():
     tempToml.add("hosts", hosts)
-    file = TOMLFile("/etc/fetiest/temp.toml")
+    file = TOMLFile("temp.toml")
     file.write(tempToml)
